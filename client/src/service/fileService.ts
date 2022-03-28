@@ -18,7 +18,6 @@ class FileService {
     }
 
     async embedFile(token: string) {
-        console.log("token:", token, "file:", this.file);
         const fetchResponse = await fetch('http://localhost:8080/embedFile', {
             method: 'POST',
             body: this.getFormData(),
@@ -29,9 +28,7 @@ class FileService {
         if (fetchResponse.ok != true) {
             return "error";
         }
-        console.log("e response:", fetchResponse)
         const response = await fetchResponse.blob()
-        console.log("blob:", response)
         const blob = response.slice(0, response.size, "image/png")
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement("a");
@@ -43,7 +40,6 @@ class FileService {
     }
 
     async decryptFile(token: string) {
-        console.log("token:", token);
         const fetchResponse = await fetch('http://localhost:8080/decryptFile', {
             method: 'POST',
             body: this.getFormData(),
