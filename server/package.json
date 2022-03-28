@@ -4,9 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "server": "nodemon src/app.ts",
-    "client": "cd .. && cd client && npm run start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "nodemon src/app.ts",
   },
   "keywords": [],
   "author": "",
