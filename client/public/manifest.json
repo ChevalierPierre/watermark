@@ -1,21 +1,36 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "wm",
+  "name": "watermark-me",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "600x600"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "bg.jpg",
+      "type": "image/jpg",
+      "sizes": "1981x2194"
     },
     {
-      "src": "logo512.png",
+      "src": "2.png",
+      "type": "image/jpg",
+      "sizes": "600x600"
+    },
+    {
+      "src": "3.png",
+      "type": "image/jpg",
+      "sizes": "600x600"
+    },
+    {
+      "src": "4.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "1384x321"
+    },
+    {
+      "src": "5.png",
+      "type": "image/png",
+      "sizes": "1422x339"
     }
   ],
   "start_url": ".",

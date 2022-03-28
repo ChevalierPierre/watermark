@@ -1,4 +1,5 @@
 import express from 'express'
+import path from 'path'
 import { transformImageWithText, getTextFromImage } from '../services/lib'
 
 let instance: null | FileController = null
@@ -18,7 +19,7 @@ class FileController {
             if (request.file && request.body) {
                 await transformImageWithText(request.file.buffer, request.body.text, 1.1)
                 response.sendFile("picture.png", {
-                    root: "/home/pierre/repo/free/server"
+                    root: path.resolve("picture.png").slice(0,-11)
                 })
             }
         } catch (error) {
@@ -31,7 +32,7 @@ class FileController {
             if (request.file) {
                 await getTextFromImage(request.file.buffer)
                 response.sendFile("text.png", {
-                    root: "/home/pierre/repo/free/server"
+                    root: path.resolve("text.png").slice(0,-8)
                 })
             }
         } catch (error) {
