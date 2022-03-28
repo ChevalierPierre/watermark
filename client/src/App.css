@@ -1,0 +1,180 @@
+html {
+  --background-color: #dfb4b4;
+  --element-color: #449c2d;
+  --shadow-color: #bd7676;
+  --primary-color: #26586b;
+  --primary-text-color: #000000;
+  --secondary-text-color: #888888;
+  --link-color: #35ed54;
+  --alert-color: #ed1c24;
+  --warning-color: #ffaa00;
+  --info-color: #192731;
+  --border-color: #ced4da;
+  overflow-x: hidden;
+}
+
+body {
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+  background-image: url('../public/bg.jpg');
+  color: var(--primary-text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container-fluid {
+  padding: 0;
+  overflow: hidden;
+}
+
+
+/* Forms */
+
+.form-control {
+  color: var(--primary-text-color);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.1rem var(--primary-color);
+}
+
+.form-control::placeholder {
+  color: var(--secondary-text-color);
+}
+
+.form-label {
+  margin-bottom: 0;
+}
+
+.text-muted {
+  color: var(--secondary-text-color) !important;
+  text-align: right;
+}
+
+.mandatory {
+  color: var(--alert-color);
+  font-size: 70%;
+  font-weight: bold;
+}
+
+/* Elements */
+
+.element {
+  background-color: var(--element-color);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 5px 0px var(--shadow-color);
+  -moz-box-shadow: 0px 2px 5px 0px var(--shadow-color);
+  box-shadow: 0px 2px 5px 0px var(--shadow-color);
+}
+
+/* Modals */
+
+.modal-title {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.modal-footer {
+  align-items: flex-end;
+}
+
+/* Buttons */
+
+.btn:not([disabled]):hover,
+.icon-btn:not([disabled]):hover {
+  cursor: pointer;
+}
+
+.primary,
+.secondary {
+  color: white;
+  font-weight: bold;
+}
+
+.primary,
+.primary:disabled,
+.primary:not([disabled]):hover,
+.primary:not([disabled]):active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.secondary,
+.secondary:disabled,
+.secondary:not([disabled]):hover,
+.secondary:not([disabled]):active {
+  background-color: #ced4da;
+  border-color: #ced4da;
+}
+
+.danger,
+.danger:disabled,
+.danger:not([disabled]):hover,
+.danger:not([disabled]):active {
+  background-color: var(--alert-color);
+  border-color: var(--alert-color);
+  font-weight: bold;
+}
+
+.btn.primary:not([disabled]):hover,
+.btn.primary:not([disabled]):active,
+.btn.secondary:not([disabled]):hover,
+.btn.secondary:not([disabled]):active,
+.btn.danger:not([disabled]):hover,
+.btn.danger:not([disabled]):active {
+  filter: brightness(110%);
+}
+
+.primary:disabled,
+.secondary:disabled,
+.danger:disabled {
+  cursor: default;
+}
+
+/* Cards */
+
+.card {
+  color: var(--primary-text-color);
+  text-align: center;
+  border: 0;
+  -webkit-box-shadow: 0px 2px 5px 0px var(--shadow-color);
+  -moz-box-shadow: 0px 2px 5px 0px var(--shadow-color);
+  box-shadow: 0px 2px 5px 0px var(--shadow-color);
+  border-radius: 10px;
+}
+
+
+.card a,
+.card a:hover {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.card-header {
+  background-color: white;
+  border-top-right-radius: 10px !important;
+}
+
+.card-header h6 {
+  margin-bottom: 0;
+}
+
+.card-body {
+  font-size: 80%;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+}
+
+.card-body .badge {
+  font-size: 100%;
+}
+
+.colorbar {
+  border-radius: 10px;
+  width: 0.5vw;
+  height: 98%;
+  margin-top: 0.2vh;
+}

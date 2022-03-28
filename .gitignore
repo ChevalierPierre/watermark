@@ -1,0 +1,13 @@
+
+/client/node_modules
+/client/build
+/client/package-lock.json
+/client/config
+/client/src/.env
+/client/.idea
+
+/server/node_modules
+/server/.env
+/server/package-lock.json
+/server/.idea
+/server/*.png
