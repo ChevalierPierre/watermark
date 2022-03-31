@@ -16,7 +16,7 @@ Add secretly any text you like in a picture to copyright it or embed secret info
 
 ## Decrypt text from picture
 
-Decrypt the embeded text from the picture to make it readable.
+Decrypt the embedded text from the picture to make it readable.
 
 ## Usage
 
@@ -26,6 +26,6 @@ Run `npm run dev` in the server folder.
 
 ## Learn More
 
-Find out more on steganography [here](https://en.wikipedia.org/wiki/Steganography)
+Find out more on steganography [here](https://en.wikipedia.org/wiki/Steganography).
 
 Special thanks to [Cornelius](https://github.com/CorneliusEb) for the inspiration.
