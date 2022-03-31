@@ -28,4 +28,4 @@ Run `npm run dev` in the server folder.
 
 Find out more on steganography [here](https://en.wikipedia.org/wiki/Steganography)
 
-Special thanks to [Cordnelius](https://github.com/CorneliusEb) for the inspiration.
+Special thanks to [Cornelius](https://github.com/CorneliusEb) for the inspiration.
