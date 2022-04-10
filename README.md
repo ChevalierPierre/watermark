@@ -20,7 +20,7 @@ Decrypt the embedded text from the picture to make it readable.
 
 ## Usage
 
-Runs `npm run dev` in the client folder.
+Run `npm run dev` in the client folder.
 
 Run `npm run dev` in the server folder.
 
