@@ -14,7 +14,6 @@ const Home: React.FC<IProps> = () => {
                         <Card className="justify-content-md-center">
                             <Card.Body>
                                 <FileUpload />
-                                <LogoutButton />
                                 <br />
                                 <br />
                             </Card.Body>

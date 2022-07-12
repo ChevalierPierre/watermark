@@ -1,6 +1,5 @@
 import React, { useState, SyntheticEvent } from 'react';
 import { Button, Form, Toast, Image, Row, Col, ToastContainer } from 'react-bootstrap';
-import { useAuth0 } from '@auth0/auth0-react';
 import UsageModal from './UsageModal';
 import {
     validateFileSize,
@@ -18,8 +17,6 @@ function FileUpload() {
             body: ''
         }
     }
-    const { getAccessTokenSilently } = useAuth0();
-    const tokenPromise = getAccessTokenSilently();
     const [isUsageModalOpen, setIsUsageModalOpen] = useState<boolean>(false);
     const [uploadFormError, setUploadFormError] = useState<string>('');
     const [embedPic, setEmbedPic] = useState<HTMLInputElement>();
@@ -49,9 +46,8 @@ function FileUpload() {
             setUploadFormError('');
         }
         const fileService = new FileService(file[0], text);
-        const token = await tokenPromise;
         if (bool === true) {
-            const url = await fileService.embedFile(token).then(data => data);
+            const url = await fileService.embedFile().then(data => data);
             if (url && url != "error") {
                 setEmbed({
                     show: true,
@@ -76,7 +72,7 @@ function FileUpload() {
             setMark("");
         }
         if (bool === false) {
-            const url = await fileService.decryptFile(token);
+            const url = await fileService.decryptFile();
             if (url && url != "error") {
                 setEmbed({
                     show: true,

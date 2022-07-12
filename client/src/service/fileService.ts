@@ -17,13 +17,10 @@ class FileService {
         return fileNames[fileNames.length - 1];
     }
 
-    async embedFile(token: string) {
+    async embedFile() {
         const fetchResponse = await fetch('http://localhost:8080/embedFile', {
             method: 'POST',
             body: this.getFormData(),
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
         })
         if (fetchResponse.ok != true) {
             return "error";
@@ -39,13 +36,11 @@ class FileService {
         return url;
     }
 
-    async decryptFile(token: string) {
+    async decryptFile() {
         const fetchResponse = await fetch('http://localhost:8080/decryptFile', {
             method: 'POST',
             body: this.getFormData(),
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
+
         })
         if (fetchResponse.ok != true) {
             return "error";
