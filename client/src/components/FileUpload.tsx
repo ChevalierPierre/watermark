@@ -156,7 +156,7 @@ function FileUpload() {
                                     className="m-2"
                                     size="sm"
                                     type="file"
-                                    accept="image/png"
+                                    accept="image/png, image/jpeg"
                                     onChange={(e: SyntheticEvent) =>
                                         setEmbedPic(e.currentTarget as HTMLInputElement)
                                     } />
@@ -171,7 +171,7 @@ function FileUpload() {
                                     className="m-2"
                                     size="sm"
                                     type="file"
-                                    accept="image/png"
+                                    accept="image/png, image/jpeg"
                                     onChange={(e: SyntheticEvent) =>
                                         setDecryptPic(e.currentTarget as HTMLInputElement)
                                     } />

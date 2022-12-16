@@ -11,7 +11,7 @@ interface IModal {
 
 function Modals({ title, onClose, isOpen, body, footer }: IModal) {
     return (
-        <Modal show={isOpen} onHide={onClose}>
+        <Modal show={isOpen} onHide={onClose} centered>
             <Modal.Header>{title}</Modal.Header>
             <Modal.Body>{body}</Modal.Body>
             <Modal.Footer>{footer}</Modal.Footer>

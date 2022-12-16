@@ -1,0 +1,1 @@
+web: cd server && npm install && npm run dev & && cd ../client && npm run dev
