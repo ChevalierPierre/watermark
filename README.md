@@ -20,9 +20,7 @@ Decrypt the embedded text from the picture to make it readable.
 
 ## Usage
 
-Run `npm run dev` in the client folder.
-
-Run `npm run dev` in the server folder.
+./start.sh
 
 ## Learn More
 
