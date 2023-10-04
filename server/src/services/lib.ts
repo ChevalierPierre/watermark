@@ -186,8 +186,8 @@ export async function transformImageWithText(srcFileName: Buffer, watermarkText:
             ret = buffer
         }
     })
-    await imgRes.writeAsync("picture.png")
-    return ret
+    const dataUrl = await imgRes.getBase64Async(Jimp.MIME_PNG);
+    return dataUrl;
 }
 
 export async function getTextFromImage(enCodeFileName: Buffer) {
@@ -208,7 +208,6 @@ export async function getTextFromImage(enCodeFileName: Buffer) {
     })
     comImg.delete();
     backImage.delete();
-    await imgRes.writeAsync("text.png")
-    return await imgRes;
-
+    const dataUrl = await imgRes.getBase64Async(Jimp.MIME_PNG);
+    return dataUrl;
 }

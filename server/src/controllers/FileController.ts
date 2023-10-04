@@ -1,5 +1,4 @@
 import express from 'express'
-import path from 'path'
 import { transformImageWithText, getTextFromImage } from '../services/lib'
 
 let instance: null | FileController = null
@@ -17,10 +16,9 @@ class FileController {
     async embedFile(request: express.Request, response: express.Response) {
         try {
             if (request.file && request.body) {
-                await transformImageWithText(request.file.buffer, request.body.text, 1.1)
-                response.sendFile("picture.png", {
-                    root: path.resolve("picture.png").slice(0,-11)
-                })
+                const url = await transformImageWithText(request.file.buffer, request.body.text, 1.1);
+                response.setHeader('Content-Type', 'image/png');
+                response.send(url);
             }
         } catch (error) {
             console.log(error)
@@ -30,10 +28,9 @@ class FileController {
     async decryptFile(request: express.Request, response: express.Response) {
         try {
             if (request.file) {
-                await getTextFromImage(request.file.buffer)
-                response.sendFile("text.png", {
-                    root: path.resolve("text.png").slice(0,-8)
-                })
+                const url = await getTextFromImage(request.file.buffer);
+                response.setHeader('Content-Type', 'image/png');
+                response.send(url);
             }
         } catch (error) {
             console.log(error)

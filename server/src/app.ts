@@ -12,7 +12,7 @@ dotenv.config();
 
 //Iniltialize express server
 const app = express();
-const upload = multer()
+const upload = multer();
 const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(bodyParser.json());
