@@ -16,7 +16,8 @@ html {
 body {
   text-align: center;
   font-family: 'Arimo', sans-serif;
-  background-image: url('../public/bg.jpg');
+  background-color: #f0f4fc;
+  /*background-image: url('../public/bg.jpg');*/
   color: var(--primary-text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

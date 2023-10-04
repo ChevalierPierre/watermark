@@ -17,47 +17,54 @@ class FileService {
         return fileNames[fileNames.length - 1];
     }
 
-    async embedFile(token: string) {
+    async embedFile() {
         const fetchResponse = await fetch('http://localhost:8080/embedFile', {
             method: 'POST',
             body: this.getFormData(),
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
         })
         if (fetchResponse.ok != true) {
             return "error";
         }
-        const response = await fetchResponse.blob()
-        const blob = response.slice(0, response.size, "image/png")
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement("a");
+        const url = await fetchResponse.text();
+        console.log('Received URL:', url);
+
+        // Create a link element for downloading
+        const link = document.createElement('a');
         link.href = url;
-        link.setAttribute("download", "image.png");
+        link.setAttribute('download', 'image.png'); // Set the desired filename
         document.body.appendChild(link);
+
+        // Simulate a click on the link to trigger the download
         link.click();
+
+        // Clean up the link
+        document.body.removeChild(link);
         return url;
     }
 
-    async decryptFile(token: string) {
+    async decryptFile() {
         const fetchResponse = await fetch('http://localhost:8080/decryptFile', {
             method: 'POST',
             body: this.getFormData(),
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
+
         })
         if (fetchResponse.ok != true) {
             return "error";
         }
-        const response = await fetchResponse.blob()
-        const blob = response.slice(0, response.size, "image/png")
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement("a");
+        const url = await fetchResponse.text();
+        console.log('Received URL:', url);
+
+        // Create a link element for downloading
+        const link = document.createElement('a');
         link.href = url;
-        link.setAttribute("download", "image.png");
+        link.setAttribute('download', 'image.png'); // Set the desired filename
         document.body.appendChild(link);
+
+        // Simulate a click on the link to trigger the download
         link.click();
+
+        // Clean up the link
+        document.body.removeChild(link);
         return url;
     }
 
